@@ -107,7 +107,7 @@ namespace LoadersApp.Server.Controllers
                 }
 
                 _service.UpdateItem(item);
-                return Ok();
+                return Ok(item);
             }
             catch (Exception ex)
             {
