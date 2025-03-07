@@ -1,0 +1,47 @@
+<h2>Edit Vendor</h2>
+<hr>
+
+<div class="edit-vendor-form">
+
+  <div *ngIf="showError" class="alert alert-danger" role="alert">
+    {{ errorMsg }}
+  </div>
+
+  <form *ngIf="editVendorForm" [formGroup]="editVendorForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label class="form-label required" for="id">ID:</label>
+      <input type="text" class="form-control" id="id" formControlName="id" readonly>
+      <div *ngIf="editVendorForm.controls['id'].invalid && (editVendorForm.controls['id'].dirty || editVendorForm.controls['id'].touched)" class="field_validation-warning">
+        <div *ngIf="editVendorForm.controls['id']?.errors?.['required']">
+          Vendor ID is required
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="form-label required" for="name">Name:</label>
+      <input type="text" class="form-control" id="name" formControlName="name">
+      <div *ngIf="editVendorForm.controls['name'].invalid && (editVendorForm.controls['name'].dirty || editVendorForm.controls['name'].touched)" class="field_validation-warning">
+        <div *ngIf="editVendorForm.controls['name']?.errors?.['required']">
+          Vendor name is required
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="form-label" for="address">Address:</label>
+      <input type="text" class="form-control" id="address" formControlName="address">
+    </div>
+
+    <div class="bottom-links">
+      <hr>
+      <button type="submit" class="btn btn-primary action-link" [disabled]="editVendorForm.pristine || editVendorForm.invalid">Save</button>
+      <button [routerLink]="['/vendors']" class="btn btn-secondary return-link">Cancel</button>
+    </div>
+
+  </form>
+</div>
+

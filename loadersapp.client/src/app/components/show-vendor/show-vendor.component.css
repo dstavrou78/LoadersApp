@@ -1,0 +1,15 @@
+.vendor-details {
+  padding: 0 20% 0 20%;
+}
+
+dt {
+  text-align:right;
+}
+
+dd {
+  text-align:left;
+}
+
+.bottom-links {
+  margin-top:25px;
+}

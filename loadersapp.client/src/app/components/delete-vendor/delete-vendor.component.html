@@ -1,0 +1,42 @@
+<h2>Delete Vendor</h2>
+<hr>
+
+<div class="delete-vendor">
+  <div class="alert alert-danger">
+    <h6>You are about to delete this Vendor permanently. Are you sure?</h6>
+  </div>
+
+  <dl class="row">
+    <dt class = "col-sm-2">
+      ID:
+    </dt>
+    <dd class = "col-sm-6">
+      {{ vendor.id }}
+    </dd>
+  </dl>
+
+  <dl class="row">
+    <dt class = "col-sm-2">
+      Name:
+    </dt>
+    <dd class = "col-sm-6">
+      {{ vendor.name }}
+    </dd>
+  </dl>
+
+  <dl class="row">
+    <dt class = "col-sm-2">
+      Address:
+    </dt>
+    <dd class = "col-sm-6">
+      {{ vendor.address }}
+    </dd>
+  </dl>
+
+  <div class="bottom-links">
+        <hr>
+        <button (click)="deleteVendor(vendor.id)" class="btn btn-danger action-link">Delete</button>
+        <button [routerLink]="['/vendors']" class="btn btn-secondary return-link">Cancel</button>
+  </div>
+
+</div>

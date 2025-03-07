@@ -1,0 +1,39 @@
+<h2>Vendor details</h2>
+<hr>
+
+<div class="vendor-details">
+
+  <dl class="row">
+    <dt class = "col-sm-2">
+      ID:
+    </dt>
+    <dd class = "col-sm-6">
+      {{ vendor.id }}
+    </dd>
+  </dl>
+
+  <dl class="row">
+    <dt class = "col-sm-2">
+      Name:
+    </dt>
+    <dd class = "col-sm-6">
+      {{ vendor.name }}
+    </dd>
+  </dl>
+
+  <dl class="row">
+    <dt class = "col-sm-2">
+      Address:
+    </dt>
+    <dd class = "col-sm-6">
+      {{ vendor.address }}
+    </dd>
+  </dl>
+
+  <div class="bottom-links">
+    <hr>
+    <button [routerLink]="['/edit-vendor', vendor.id]" class="btn btn-primary action-link">Edit</button>
+    <button [routerLink]="['/vendors']" class="btn btn-secondary return-link">Back to list</button>
+  </div>
+
+</div>

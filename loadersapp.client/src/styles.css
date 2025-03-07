@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+.return-link {
+  float: right;
+}
+
+.action-link {
+  float: left;
+}
+
+.bottom-links {
+  margin-top:50px;
+}
+
+.required::after{
+  content:"*";
+  color: red;
+}
+
+.field_validation-warning {
+  color: red;
+  padding: 0px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group{
+  margin-bottom: 20px;
+}
+
+tr {
+  vertical-align: middle;
+}
