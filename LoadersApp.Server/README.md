@@ -13,5 +13,3 @@ Edit file appsettings.json:
 ```
 "LoaderUsed": "DataLoader"
 ```
-### Swagger environment
-Navigate to /swagger to get detailed documentation about the endpoints and their functionality.
